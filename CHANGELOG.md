@@ -1,5 +1,16 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.58.0] - 2026-11-03
+### Aprimorado e Traduzido
+- **Varredura Completa de Diálogos (751 novas falas)**: Cobertura de 100% dos textos e falas exclusivas do Pokémon Crystal extraídos da ROM:
+  - Sistema completo de ligações de treinadores no Pokégear (Bancos 19, 29, 5d e 6d - 571 falas: Alan, Joey, Chad, Dana, Jose, Tiffany, Vance, Arnie, Parry, Liz, Anthony, Todd, Gina, Mãe, etc.).
+  - Eventos de história exclusivos do Crystal: Eusine, Trio Sábio (Wise Trio), Suicune na Torre de Lata e no Lago da Fúria, Centro de Comunicação POKéMON (PokéCom Center) e Torre de Batalha (Battle Tower).
+  - Placas e interações de mapa (Floria na Rota 36 `65:43ed`, Clair entregando TM24, Copycat em Saffron, estantes e gritos de Pokémon).
+- **Rádio do Pokégear Localizado (`strings.lua`)**: 104 novas frases adicionadas incluindo nomes de programas, dias da semana, falas de DJs (DJ Ben, DJ Fern, DJ Lily),Oak's PkMn Talk, canções e invasão da Equipe Rocket.
+- **Pontos de Referência (`landmarks.lua`)**: Sincronização completa de 96 pontos de referência com Pokémon Gold, incluindo `TORRE DE BATALHA` e `ESPECIAL`.
+- **Formatação Rigorosa de Texto**: Todos os 751 textos formatados com quebras estritas de até 18 caracteres por linha, respeitando marcadores e setas de rolagem do Game Boy.
+
+
 ## [0.57.9] - 2026-09-05
 ### Aprimorado e Corrigido
 - Padronização do identificador de repositório para `LordSangreal/versaocristal` para compatibilidade com custom carts no Gen1Recomp.

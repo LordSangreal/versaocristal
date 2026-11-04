@@ -15,6 +15,18 @@ return function(mod)
     itens = "pt",
     npcs = "pt",
     pokedex = "pt",
+    radios = "pt",
+  }
+  -- Chaves de lang/strings.lua que sao NOMES de estacao do POKeGEAR, e nao
+  -- falas. Com NOME DAS RADIOS em ENGLISH elas ficam no original.
+  local ESTACOES = {
+    ["Lucky Channel"] = true, ["POKéDEX Show"] = true,
+    ["POKéMON Music"] = true, ["POKÉMON Music"] = true,
+    ["POKéMON Channel"] = true, ["Places & People"] = true,
+    ["Places and People"] = true, ["Let's All Sing!"] = true,
+    ["OAK's <PK><MN> Talk"] = true, ["OAK's PKMN Talk"] = true,
+    ["POKé FLUTE"] = true, ["POKÉ FLUTE"] = true,
+    ["Rocket Radio"] = true, ["Unown Radio"] = true,
   }
   local temOpcoes = pcall(function()
     mod.options:define({
@@ -62,6 +74,14 @@ return function(mod)
         key = "menus",
         type = "choice",
         label = "MENUS E BATALHA",
+        choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
+        default = "pt",
+        requires_restart = true,
+      },
+      {
+        key = "radios",
+        type = "choice",
+        label = "NOME DAS RADIOS",
         choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
         default = "pt",
         requires_restart = true,
@@ -138,6 +158,8 @@ return function(mod)
   if idioma.menus == "pt" then
     local catalog_strings = catalog("strings")
     n = n + each("strings", function(src, value)
+      -- Nome de estacao em ENGLISH: nao sobrescreve, o motor mostra o original.
+      if idioma.radios == "en" and ESTACOES[src] then return end
       mod.content.strings:override(src, value)
     end)
 
@@ -149,6 +171,8 @@ return function(mod)
 
       local function translateRadioText(s)
         if type(s) ~= "string" or s == "" then return s end
+        -- Estacao em ENGLISH: o hook tambem nao traduz o nome do canal.
+        if idioma.radios == "en" and ESTACOES[s] then return s end
 
         local oak_mon = s:match("^OAK: (.+)$")
         if oak_mon then

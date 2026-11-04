@@ -1,5 +1,10 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.59.0] - 2026-11-03
+### Adicionado
+- Opcao **NOME DAS RADIOS** (PORTUGUES / ENGLISH) em OPTIONS: troca so os nomes dos canais do POKeGEAR (Lucky Channel, POKeDEX Show, Rocket Radio...). As falas dos programas continuam em portugues. Pede reinicio.
+- **TUNING** traduzido para SINTONIA.
+
 ## [0.58.0] - 2026-11-03
 ### Aprimorado e Traduzido
 - **Varredura Completa de Diálogos (751 novas falas)**: Cobertura de 100% dos textos e falas exclusivas do Pokémon Crystal extraídos da ROM:

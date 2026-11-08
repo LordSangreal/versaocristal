@@ -27,6 +27,7 @@ return function(mod)
     ["OAK's <PK><MN> Talk"] = true, ["OAK's PKMN Talk"] = true,
     ["POKé FLUTE"] = true, ["POKÉ FLUTE"] = true,
     ["Rocket Radio"] = true, ["Unown Radio"] = true,
+    ["BUENA'S PASSWORD"] = true,
   }
   local temOpcoes = pcall(function()
     mod.options:define({

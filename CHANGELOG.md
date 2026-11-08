@@ -1,5 +1,14 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.60.0] - 2026-11-08
+### Traduzido
+- **Vidente (POKeSEER)**: todas as falas e os conselhos "A propósito…" (intro, local, hora, nível, troca, ovo, "Fufufu!").
+- **Rádio da BUENA**: nome da estação (SENHA DA BUENA) e todas as falas, inclusive as da meia-noite.
+- **Batalha**: "X inimigo desmaiou!" e "X enviou Y!" (mensagens do cache da ROM).
+- **Trocas com NPC**: as duas falas que faltavam ("Trocar é tão estranho…", "Hã? O que houve?").
+- A opção NOME DAS RADIOS também mantém em inglês o nome "BUENA'S PASSWORD".
+- Requer o motor remendado (gen1recomp 0.4.6 do fork LordSangreal): ele passa o texto do cache por Strings().
+
 ## [0.59.0] - 2026-11-03
 ### Adicionado
 - Opcao **NOME DAS RADIOS** (PORTUGUES / ENGLISH) em OPTIONS: troca so os nomes dos canais do POKeGEAR (Lucky Channel, POKeDEX Show, Rocket Radio...). As falas dos programas continuam em portugues. Pede reinicio.

@@ -1,5 +1,14 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.61.0] - 2026-11-08
+### Traduzido
+- **498 textos de sistema do cache da ROM** (`rom_text.lua`) que saíam em inglês: mensagens de batalha
+  (status, clima, golpes, "foi atingido por…", "fugiu", "recusou o presente"), menus (PC, MOCHILA, Loja,
+  Cartas/CARD FOLDER, relógio e horário de verão), Centro de Comunicação POKéCOM, Fliperama de Cartas,
+  Batalha Móvel, troca de itens, Seer/Vidente e rádio. Conferência: 530 faltavam, restam 0 traduzíveis.
+- Largura revisada em 18 colunas (sem estouro de linha em textos sem nome de POKéMON).
+- Requer o motor remendado gen1recomp 0.4.6 (RomText passa o texto do cache por Strings()).
+
 ## [0.60.0] - 2026-11-08
 ### Traduzido
 - **Vidente (POKeSEER)**: todas as falas e os conselhos "A propósito…" (intro, local, hora, nível, troca, ovo, "Fufufu!").

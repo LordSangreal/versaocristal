@@ -1,5 +1,14 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.61.2] - 2026-11-17
+### Corrigido e Melhorado
+- **Correção da colisão no Menu de Combate (MOCHILFUGI)**:
+  - Caixa de batalha expandida de 12 para 18 blocos de largura (`boxX = 2`), com espaçamento uniforme de 8 blocos entre colunas.
+  - Substituída a abreviação `<PK><MN>` pelo nome completo `POKéMON`.
+  - Todas as 4 opções (`LUTAR`, `POKéMON`, `MOCHILA`, `FUGIR`) agora cabem perfeitamente sem sobreposição de letras e com espaçamento correto de cursor.
+  - Aplicado tanto no motor compartilhado (`BattleState.lua`) quanto via hook dinâmico em `main.lua` para compatibilidade retroativa em APKs existentes.
+- **Textos de estantes de livros**: adicionadas traduções de fallback para livros ilustrados de POKéMON.
+
 ## [0.61.1] - 2026-11-17
 ### Traduzido e Corrigido
 - **Descrições do Start Menu (Menu Account)**: traduzidos todos os textos explicativos da caixa lateral do menu START (POKéDEX, POKéMON, MOCHILA, POKéGEAR, Cartão de Treinador, SALVAR, OPÇÃO, MODS, SAIR, Concurso de Insetos).

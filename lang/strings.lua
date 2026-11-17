@@ -1938,4 +1938,7 @@ return {
   ["Which POKéMON\nshould I photo-\vgraph?"] = "De qual #MON\nvocê quer uma\nfoto?",
   ["You can't take an\nEGG!\f"] = "Não pode levar\num OVO!\f",
   ["You don't have a\nPOKéMON!"] = "Você não tem\nnenhum POKéMON!",
+  ["A whole collection\nof POKéMON picture\vbooks!"] = "Uma coleção\ninteira de livros\vde POKéMON!",
+  ["A whole collection\nof POKéMON picture\nbooks!"] = "Uma coleção\ninteira de livros\nde POKéMON!",
+  ["A whole collection of POKéMON picture books!"] = "Uma coleção inteira de livros de POKéMON!",
 }

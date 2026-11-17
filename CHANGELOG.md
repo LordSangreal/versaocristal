@@ -1,5 +1,12 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.61.1] - 2026-11-17
+### Traduzido e Corrigido
+- **Descrições do Start Menu (Menu Account)**: traduzidos todos os textos explicativos da caixa lateral do menu START (POKéDEX, POKéMON, MOCHILA, POKéGEAR, Cartão de Treinador, SALVAR, OPÇÃO, MODS, SAIR, Concurso de Insetos).
+- **Rótulo BOXES**: adicionada tradução do item de menu BOXES para CAIXAS.
+- **Hook do StartMenu em tempo de execução**: adicionado suporte no `main.lua` para garantir a exibição correta das descrições formatadas com quebra estrita de até 10 colunas por linha (limite da caixa lateral).
+- **Ajustes de estouro de linha da 0.61.0**: revisados 15 textos de batalha e sistema que ultrapassavam 18 caracteres.
+
 ## [0.61.0] - 2026-11-08
 ### Traduzido
 - **498 textos de sistema do cache da ROM** (`rom_text.lua`) que saíam em inglês: mensagens de batalha

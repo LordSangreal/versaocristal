@@ -1,5 +1,9 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.61.5] - 2026-11-17
+### Corrigido
+- **Relógio do Pokégear (`TUESDIA`)**: o motor monta o dia da semana concatenando o texto da ROM (`TUES`) com o rótulo `DIA`, produzindo `TUESDIA` na tela. Adicionado hook em `main.lua` que substitui `Clock.weekdayName` e devolve o nome do dia já traduzido (`DOMINGO`, `SEGUNDA`, `TERÇA`, `QUARTA`, `QUINTA`, `SEXTA`, `SÁBADO`). Também registradas em `strings.lua` as variantes concatenadas (`TUESDIA`, `MONDAYDIA`, etc.) como fallback para motores que não passam pelo hook.
+
 ## [0.61.2] - 2026-11-17
 ### Corrigido e Melhorado
 - **Correção da colisão no Menu de Combate (MOCHILFUGI)**:

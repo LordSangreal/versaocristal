@@ -258,6 +258,24 @@ return function(mod)
         end
       end
     end)
+
+    -- Relogio do Pokegear: o motor monta o dia como
+    -- RomText("PrintDayOfWeek.Days#N") .. RomText("PrintDayOfWeek.Day").
+    -- Na ROM BR o segundo trecho e "DIA", e o resultado na tela e "TUESDIA".
+    -- Devolve o nome traduzido direto, antes dessa concatenacao.
+    pcall(function()
+      local Clock = require("src.core.gen2.Clock")
+      if not Clock or type(Clock.weekdayName) ~= "function" then return end
+      local DIAS_PT = {
+        "DOMINGO", "SEGUNDA", "TERÇA", "QUARTA", "QUINTA", "SEXTA", "SÁBADO",
+      }
+      local orig_weekday = Clock.weekdayName
+      Clock.weekdayName = function(day, data)
+        local nome = type(day) == "number" and DIAS_PT[day] or nil
+        if nome then return nome end
+        return orig_weekday(day, data)
+      end
+    end)
 -- Hook do StartMenu para garantir traducao das descricoes dos itens do menu
     pcall(function()
       local StartMenu = require("src.ui.gen2.StartMenu")

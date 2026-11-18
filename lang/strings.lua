@@ -1,4 +1,14 @@
 return {
+  ["Boy"] = "Menino",
+  ["Girl"] = "Menina",
+  ["NEW"] = "NOVO",
+  ["OLD"] = "ANTIGO",
+  ["WITHDRAW"] = "RETIRAR",
+  ["DEPOSIT"] = "GUARDAR",
+  ["RELEASE"] = "LIBERAR",
+  ["JOHTO BADGES"] = "INSÍGNIAS JOHTO",
+  ["KANTO BADGES"] = "INSÍGNIAS KANTO",
+  ["No <PK><MN> found!"] = "Nenhum POKéMON\nencontrado!",
   ["m"] = "m",
   ["kg"] = "kg",
   ["HT"] = "ALT",
@@ -112,7 +122,7 @@ return {
   ["%s gained a boosted %d EXP. Points!"] = "%s ganhou\n%d PTS. EXP\nextra!",
   ["%s got %s%d\nfor winning!Sent some to MOM!"] = "%s ganhou %s%d\npor vencer!\vEnviou para a MÃE!",
   ["%s got %s%d for winning!"] = "%s ganhou %s%d por vencer!",
-  ["%s got %s%d for winning! Sent some to MOM!"] = "%s ganhou %s%d por vencer! Mandou parte para a MOM!",
+  ["%s got %s%d for winning! Sent some to MOM!"] = "%s ganhou %s%d\npor vencer! Enviou\vparte para a MÃE!",
   ["%s got an ENCORE!"] = "%s ganhou\num BIS!",
   ["%s got off\nthe BICYCLE."] = "%s desceu da\nBICICLETA.",
   ["%s got on\nthe BICYCLE!"] = "%s subiu na\nBICICLETA!",
@@ -294,7 +304,7 @@ return {
   ["%s?\nThat will be\n¥%d. OK?"] = "%s?\nSão\n¥%d. Tudo bem?",
   ["(organizing --"] = "(organizando --",
   ["1, 2 and… %s forgot %s!"] = "1, 2 e… %s\nesqueceu\v%s!",
-  ["1, 2 and… Poof!%s forgot\n%s.And…%s learned\n%s!"] = "1, 2 e… Pouás!\f%s\nesqueceu\v%s.\fE…\f%s\naprendeu\v%s!",
+  ["1, 2 and… Poof!%s forgot\n%s.And…%s learned\n%s!"] = "1, 2 e… Puf!\f%s\nesqueceu\v%s.\fE…\f%s\naprendeu\v%s!",
   [":TYPE"] = ":TIPO",
   ["<PK><MN>"] = "<PK><MN>",
   ["A #MON may be\nable to move this."] = "Um #MON talvez\nmova isto.",
@@ -303,7 +313,7 @@ return {
   ["A POKéMON could be\nin this tree.Want to HEADBUTT\nit?"] = "Pode haver um\nPOKéMON na árvore.\fDar CABEÇADA\nnela?",
   ["A blinding FLASH\nlights the area!"] = "Um CLARÃO forte\nilumina a área!",
   ["A critical hit!"] = "Um golpe crítico!",
-  ["A party POKéMON\ntops this level."] = "Um POKéMON do time\nsupere este nível.",
+  ["A party POKéMON\ntops this level."] = "Um POKéMON do time\nsupera este nível.",
   ["A sandstorm brewed!"] = "Formou-se uma\ntempestade\vde areia!",
   ["A to Z"] = "A a Z",
   ["A to Z MODE"] = "MODO A a Z",
@@ -442,7 +452,6 @@ return {
   ["DECORATION"] = "DECORAÇÃO",
   ["DEFENSE"] = "DEFESA",
   ["DEL"] = "APAGAR",
-  ["DELETE"] = "APAGAR",
   ["DEPOSIT <PK><MN>"] = "DEPOSITAR <PK><MN>",
   ["DEPOSIT ITEM"] = "GUARDAR ITEM",
   ["DESC. GOLPES"] = "DESC. GOLPES",
@@ -550,7 +559,7 @@ return {
   ["Here you are!\nThank you!"] = "Aqui está!\nObrigado!",
   ["Here you go!"] = "Aqui está!",
   ["Hey! It's\n%s!"] = "Ei! É\n%s!",
-  ["Hey! There's a\nswitch under the\ntrash!The 1st electric\nlock opened!"] = "Ei! Tem um\ninterruptor\vembaixo do\vlixo!\fA 1ª trava\nelétrica abriu!",
+  ["Hey! There's a\nswitch under the\ntrash!The 1st electric\nlock opened!"] = "Ei! Tem um\ninterruptor\vembaixo do\vlixo!\fA trava nº 1\nfoi aberta!",
   ["Hi there!\nMay I help you?"] = "Olá!\nPosso ajudar?",
   ["Hi! The {STRBUF}\nyou traded me isdoing great!"] = "Oi! O {STRBUF}\nque você me deu\vestá ótimo!",
   ["Hi! Welcome home!\nYou're trying veryhard, I see.I've kept your\nroom tidy.Or is this about\nyour money?"] = "Oi! Bem-vindo!\nVocê está se\vesforçando muito.\fDeixei seu quarto\narrumado.\fOu isto é sobre o\nseu dinheiro?",
@@ -601,7 +610,7 @@ return {
   ["It doesn't affect %s..."] = "Não afeta %s...",
   ["It has no interest\nin {STRBUF}."] = "Não tem interesse\nno {STRBUF}.",
   ["It hurt itself in\nits confusion!"] = "Ficou confuso e\nferiu a si mesmo!",
-  ["It hurt itself in its\nconfusion!"] = "%s se feriu na sua\nprópria confusão!",
+  ["It hurt itself in its\nconfusion!"] = "Feriu a si mesmo\nna confusão!",
   ["It hurt itself in its confusion!"] = "Ele se feriu na\nconfusão!",
   ["It knows that\nmove already!"] = "Já conhece esse\ngolpe!",
   ["It might look the\nsame as before,\n\nbut this new name\nis much better!\n\nWell done!"] = "Pode parecer igual\nao de antes,\n\nmas este nome novo\né bem melhor!\n\nMuito bem!",
@@ -713,7 +722,7 @@ return {
   ["No more usable <PK><MN>!"] = "Sem outro <PK><MN> apto!",
   ["No releasing EGGS!"] = "Não solte EGGS!",
   ["No room left to\nstore items."] = "Sem espaço para\nguardar itens.",
-  ["No! A new BADGE\nis required."] = "Não! É preciso\numa nova BADGE.",
+  ["No! A new BADGE\nis required."] = "Não! É preciso\numa nova INSÍGNIA.",
   ["No! There's no\nrunning from atrainer battle!"] = "Não dá para fugir\nde uma batalha\vde treinador!",
   ["No! There's no running from a\ntrainer battle!"] = "Não! Não dá pra fugir de\nbatalha de treinador!",
   ["No! There's no running from a trainer battle!"] = "Não! Não dá pra fugir de\nbatalha de treinador!",
@@ -920,7 +929,7 @@ return {
   ["SPECIAL"] = "ESP.",
   ["SPEED"] = "VELOC.",
   ["START: create"] = "START: criar",
-  ["START>CANCEL"] = "START>SAIR",
+  ["START>CANCEL"] = "START▶SAIR",
   ["STATS"] = "DADOS",
   ["STATUS/"] = "STATUS/",
   ["STEEL"] = "AÇO",
@@ -992,10 +1001,10 @@ return {
   ["That's too impor-\ntant to toss!"] = "Importante demais\npara jogar fora!",
   ["The %s\nis full..."] = "O %s\nestá cheio...",
   ["The %s\nis full…"] = "O %s\nestá cheio…",
-  ["The 2nd electric\nlock opened!The motorized door\nopened!"] = "A 2ª trava\nelétrica abriu!\fA porta\nmotorizada abriu!",
+  ["The 2nd electric\nlock opened!The motorized door\nopened!"] = "A trava nº 2\nfoi aberta!\fA porta\nmotorizada abriu!",
   ["The GHOST\nappeared!"] = "O FANTASMA\napareceu!",
   ["The MIRROR MOVE\nfailed!"] = "O MIRROR MOVE\nfalhou!",
-  ["The PACK is full."] = "A PACK está\ncheia.",
+  ["The PACK is full."] = "A MOCHILA está\ncheia.",
   ["The POKéMON BOX is full. That can't be used now."] = "A POKéMON BOX está\ncheia. Não dá para\vusar isso agora.",
   ["The REPEL used\nearlier is stillin effect."] = "O REPELENTE de\nantes ainda está\vfazendo efeito.",
   ["The SUBSTITUTE took damage for %s!"] = "O SUBSTITUTO sofreu\no dano por %s!",
@@ -1139,7 +1148,6 @@ return {
   ["Withdrew\n%s."] = "Retirou\n%s.",
   ["Withdrew %d\n%s(S)."] = "Retirou %d\n%s(S).",
   ["Would you like to\nSAVE the game?"] = "Quer SALVAR\no jogo?",
-  ["Would you like to\nend the Contest?"] = "Quer encerrar o\nConcurso?",
   ["Would you like to\nsave the game?"] = "Quer salvar\no jogo?",
   ["Wow! Thank you!\nI always wanted{STRBUF}!"] = "Uau! Obrigado!\nEu sempre quis\v{STRBUF}!",
   ["Wow! You've hit\n200! Your #DEX\nis looking great!"] = "Uau! Chegou a 200!\nSua #DEX está\nótima!",
@@ -1180,7 +1188,7 @@ return {
   ["You don't want to\ntrade? Oh, darn…"] = "Não quer trocar?\nAh, que droga…",
   ["You have no <PK><MN>!"] = "Você não tem <PK><MN>!",
   ["You have no more\nPOKéMON that canfight!"] = "Você não tem mais\nPOKéMON que\vpossam lutar!",
-  ["You have no more\nPOKéMON that can\\011fight!"] = "Você não tem mais\nPOKéMON que possa\\011lutar!",
+  ["You have no more\nPOKéMON that can\\011fight!"] = "Você não tem mais\nPOKéMON que possa\vlutar!",
   ["You have no more POKéMON!"] = "Você não tem\nmais POKéMON!",
   ["You have no room\nfor it."] = "Você não tem\nespaço para isso.",
   ["You haven't saved\nthat much."] = "Você não guardou\ntudo isso.",
@@ -1270,7 +1278,7 @@ return {
   ["{STRBUF} used\nDIG!"] = "{STRBUF} usou\nCAVAR!",
   ["{STRBUF} used\nSTRENGTH!"] = "{STRBUF} usou\nFORÇA!",
   ["{STRBUF} used\nSURF!"] = "{STRBUF} usou\nSURFAR!",
-  ["{STRBUF} used\nSWEET SCENT!"] = "{STRBUF} usou\nDOCE AROMA!",
+  ["{STRBUF} used\nSWEET SCENT!"] = "{STRBUF} usou\nAROMA DOCE!",
   ["{STRBUF} used\nWATERFALL!"] = "{STRBUF} usou\nCACHOEIRA!",
   ["{STRBUF} used\nWHIRLPOOL!"] = "{STRBUF} usou\nREDEMOINHO!",
   ["{STRBUF} was\nsent to {STRBUF}."] = "{STRBUF} foi\npara {STRBUF}.",
@@ -1584,8 +1592,8 @@ return {
   ["\nToday's ,"] = "\nHoje é ,",
   ["You now have\n{NUM} points."] = "Você agora tem\n{NUM} pontos.",
   ["\na boosted\v{NUM} EXP. Points!"] = "\num bônus de\v{NUM} PTS. EXP!",
-  ["Booted up an HM."] = "Ligou uma MO.",
-  ["Booted up a TM."] = "Ligou uma MT.",
+  ["Booted up an HM."] = "Ligou uma HM.",
+  ["Booted up a TM."] = "Ligou uma TM.",
   ["Breeding is not\npossible."] = "A criação não é\npossível.",
   ["{STRBUF}'s\nburn was healed."] = "A queimadura de\n{STRBUF} sarou.",
   ["But {PLAYER} can't\ncarry any more\vitems."] = "{PLAYER} não pode\nlevar mais itens.",

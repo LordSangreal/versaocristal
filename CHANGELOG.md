@@ -1,5 +1,14 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.62.0] - 2026-11-17
+### Corrigido (lote seguro da auditoria — respeita as opções PT/EN do mod)
+- **Pokédex em metros/kg**: a fórmula em `main.lua` usava a codificação métrica do Gold; agora converte corretamente pés/polegadas e libras dos dados do Crystal (`AERODACTYL` 5'11"/130 lb → 1,80 m / 58,97 kg).
+- **Fala descartada**: `It hurt itself in its\nconfusion!` tinha `%s` na tradução e nenhum `%` na fonte; o motor jogava a tradução fora.
+- **Glifos**: `R$` → `¥`, `1ª/2ª` → `nº 1/nº 2`, `100%` → `toda completa`, `START>SAIR` → `START▶SAIR`, `\011` → `\v`.
+- **Terminologia fechada**: `QMD/GEL/VEN/SON` → `BRN/FRZ/PSN/SLP`, `MT/MO` → `TM/HM`, `CARVALHO` → `OAK`, `MOM` → `MÃE`, `PACK` → `MOCHILA`, `BADGE` → `INSÍGNIA`, `DOCE AROMA` → `AROMA DOCE`, `Pokémon` → `POKéMON`.
+- **Chaves faltando**: `ABRA` na Pokédex, 4 itens exclusivos do Crystal, `BLACKBELT_I`, `PSYCHIC_M`, `MYSTICALMAN`, `Boy/Girl`, `WITHDRAW/DEPOSIT/RELEASE`, `JOHTO/KANTO BADGES`, `No <PK><MN> found!`, `NEW/OLD`.
+- **Duplicatas removidas** em `strings.lua` (`DELETE`, `end the Contest?`). `status_labels` agora obedece à opção MENUS E BATALHA.
+
 ## [0.61.5] - 2026-11-17
 ### Corrigido
 - **Relógio do Pokégear (`TUESDIA`)**: o motor monta o dia da semana concatenando o texto da ROM (`TUES`) com o rótulo `DIA`, produzindo `TUESDIA` na tela. Adicionado hook em `main.lua` que substitui `Clock.weekdayName` e devolve o nome do dia já traduzido (`DOMINGO`, `SEGUNDA`, `TERÇA`, `QUARTA`, `QUINTA`, `SEXTA`, `SÁBADO`). Também registradas em `strings.lua` as variantes concatenadas (`TUESDIA`, `MONDAYDIA`, etc.) como fallback para motores que não passam pelo hook.

@@ -1,6 +1,15 @@
--- Pokédex de Pokémon Crystal em Português Brasileiro.
+-- Pokédex de POKéMON Crystal em Português Brasileiro.
 -- Contém todas as 251 espécies com textos oficiais formatados (máx 18 cols).
 return {
+  ["ABRA"] = {
+    dex = 63,
+    kind = "PSI",
+    height = 211,
+    weight = 435,
+    text = "Dorme 18 horas
+por dia. Liberaondas cerebrais
+estanhas ao dormir",
+  },
   ["AERODACTYL"] = {
     dex = 142,
     kind = "FÓSSIL",
@@ -46,7 +55,7 @@ return {
     kind = "LENDÁRIO",
     height = 603,
     weight = 3420,
-    text = "Um Pokémon nobre e<NEXT>majestoso. Corre<NEXT>com tamanha leveza",
+    text = "Um POKéMON nobre e<NEXT>majestoso. Corre<NEXT>com tamanha leveza",
     text2 = "que parece voar por<NEXT>cima do chão.",
   },
   ["ARIADOS"] = {
@@ -342,7 +351,7 @@ return {
     kind = "DRAGÃO",
     height = 703,
     weight = 4630,
-    text = "Um Pokémon bondoso<NEXT>que voa sobre o mar<NEXT>e resgata pessoas",
+    text = "Um POKéMON bondoso<NEXT>que voa sobre o mar<NEXT>e resgata pessoas",
     text2 = "em navios que estão<NEXT>afundando.",
   },
   ["DRATINI"] = {
@@ -943,7 +952,7 @@ return {
     height = 211,
     weight = 220,
     text = "Famoso por ser fraco<NEXT>e patético, só pula<NEXT>sem rumo e é",
-    text2 = "presa fácil para<NEXT>outros Pokémon.",
+    text2 = "presa fácil para<NEXT>outros POKéMON.",
   },
   ["MAGMAR"] = {
     dex = 126,
@@ -1038,7 +1047,7 @@ return {
     kind = "ESPÉCIE",
     height = 104,
     weight = 90,
-    text = "Dizem que carrega o<NEXT>código genético de<NEXT>todos os Pokémon,",
+    text = "Dizem que carrega o<NEXT>código genético de<NEXT>todos os POKéMON,",
     text2 = "podendo usar todos<NEXT>os golpes.",
   },
   ["MEWTWO"] = {
@@ -1055,7 +1064,7 @@ return {
     height = 311,
     weight = 1660,
     text = "Produz litros de um<NEXT>leite muito rico em<NEXT>nutrientes que cura",
-    text2 = "Pokémon e humanos com<NEXT>rapidez.",
+    text2 = "POKéMON e humanos com<NEXT>rapidez.",
   },
   ["MISDREAVUS"] = {
     dex = 200,
@@ -1190,7 +1199,7 @@ return {
     kind = "ESPIRAL",
     height = 104,
     weight = 170,
-    text = "Um Pokémon extinto<NEXT>que nadava no mar<NEXT>antigo movendo seus",
+    text = "Um POKéMON extinto<NEXT>que nadava no mar<NEXT>antigo movendo seus",
     text2 = "dez tentáculos com<NEXT>destreza.",
   },
   ["OMASTAR"] = {
@@ -1350,7 +1359,7 @@ return {
     kind = "VIRTUAL",
     height = 207,
     weight = 800,
-    text = "Um Pokémon feito de<NEXT>códigos de computador<NEXT>que pode entrar",
+    text = "Um POKéMON feito de<NEXT>códigos de computador<NEXT>que pode entrar",
     text2 = "livremente no mundo<NEXT>digital.",
   },
   ["PORYGON2"] = {
@@ -1759,7 +1768,7 @@ return {
     height = 200,
     weight = 190,
     text = "Lambe as patas que<NEXT>ficaram embebidas<NEXT>em doce mel de",
-    text2 = "Beedrill o dia todo<NEXT>na floresta.",
+    text2 = "BEEDRILL o dia todo<NEXT>na floresta.",
   },
   ["TENTACOOL"] = {
     dex = 72,

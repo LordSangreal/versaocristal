@@ -21,10 +21,10 @@
 -- as chaves SLP/PSN/BRN/FRZ/PAR/FNT do lang/strings.lua.  Aqui fica pelo
 -- Gen2Recomped, que usa o registro.
 return {
-  ["burn"] = "QMD",
-  ["freeze"] = "GEL",
+  ["burn"] = "BRN",
+  ["freeze"] = "FRZ",
   ["paralyze"] = "PAR",
-  ["poison"] = "VEN",
-  ["sleep"] = "SON",
-  ["toxic"] = "VEN",
+  ["poison"] = "PSN",
+  ["sleep"] = "SLP",
+  ["toxic"] = "PSN",
 }

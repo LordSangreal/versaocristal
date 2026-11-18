@@ -14,6 +14,10 @@
 -- sao itens de segurar.  As TM/HM tambem, porque o nome do item e o
 -- codigo (TM01), nao o golpe.
 return {
+  ["BLUE_CARD"] = "CARTÃO AZUL",
+  ["CLEAR_BELL"] = "SINO CLARO",
+  ["EGG_TICKET"] = "TICKET OVO",
+  ["GS_BALL"] = "BOLA GS",
   ["AMULET_COIN"] = "MOEDA AMUL.",
   ["ANTIDOTE"] = "ANTÍDOTO",
   ["AWAKENING"] = "DESPERTAR",

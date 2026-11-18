@@ -21,6 +21,7 @@
 -- papel.  `<PK><MN>` sao duas sequencias do charmap da ROM, mantidas como
 -- estao; em portugues o substantivo vem antes.
 return {
+  ["MYSTICALMAN"] = "MÍSTICO",
   ["BEAUTY"] = "BELDADE",
   ["BIKER"] = "MOTOQUEIRO",
   ["BIRD_KEEPER"] = "CRIADOR AVES",

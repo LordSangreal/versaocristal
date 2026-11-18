@@ -1,6 +1,8 @@
 -- Descricao de golpe.  Chave = id do motor.
 -- Duas linhas de ate 18 colunas.
 return {
+  ["PSYCHIC_M"] = "Ataque que pode
+baixar a ESP.DEF.",
   ["ABSORB"] = "Rouba metade do\ndano causado.",
   ["ACID"] = "Ataque que pode\nbaixar o DEFENSE.",
   ["ACID_ARMOR"] = "Sobe muito o\nDEFENSE próprio.",

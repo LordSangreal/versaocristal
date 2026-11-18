@@ -2,6 +2,14 @@
 -- Duas linhas de ate 18 colunas.
 -- TM e HM nao entram: a bolsa mostra a descricao do GOLPE.
 return {
+  ["BLUE_CARD"] = "Mostra os pontos
+da BUENA.",
+  ["CLEAR_BELL"] = "Aumenta o volume
+do som.",
+  ["EGG_TICKET"] = "Ingresso para
+o evento de OVO.",
+  ["GS_BALL"] = "Bola especial
+de GOLD e SILVER.",
   ["AMULET_COIN"] = "Dobra o dinheiro\nganho. (SEGURA)",
   ["ANTIDOTE"] = "Cura POKéMON\nenvenenado.",
   ["AWAKENING"] = "Acorda POKéMON\nadormecido.",
@@ -13,7 +21,7 @@ return {
   ["BIG_MUSHROOM"] = "Um cogumelo raro.\nVende caro.",
   ["BIG_PEARL"] = "Pérola grande e\nbela. Vende caro.",
   ["BITTER_BERRY"] = "Cura a confusão\nsozinho. (SEGURA)",
-  ["BLACKBELT"] = "Reforça golpe\nlutador. (SEGURA)",
+  ["BLACKBELT_I"] = "Reforça golpe\nlutador. (SEGURA)",
   ["BLACKGLASSES"] = "Reforça golpe\nsombrio. (SEGURA)",
   ["BLK_APRICORN"] = "Um APRICORN preto.",
   ["BLUESKY_MAIL"] = "MAIL estampada de\ncéu. (SEGURA)",

@@ -394,9 +394,11 @@ return function(mod)
     end)
   end
 
-  each("status_labels", function(id, value)
-    pcall(function() mod.content.statuses:patch(id, { label = value, hudLabel = value }) end)
-  end)
+  if idioma.menus == "pt" then
+    each("status_labels", function(id, value)
+      pcall(function() mod.content.statuses:patch(id, { label = value, hudLabel = value }) end)
+    end)
+  end
 
   each("type_names", function(id, value)
     pcall(function() mod.content.type_chart:patch(id, { name = value }) end)
@@ -416,8 +418,8 @@ return function(mod)
       for id, entrada in pairs(dex) do
         if type(entrada) == "table" and entrada.height and entrada.weight then
           pcall(function()
-            local hM = (math.floor(entrada.height / 100) * 10 + (entrada.height % 100)) / 10
-            local wKg = entrada.weight / 10
+            local hM = (math.floor(entrada.height / 100) * 12 + (entrada.height % 100)) * 0.0254
+            local wKg = entrada.weight / 10 * 0.45359237
             mod.content.pokemon:patch(id, {
               dexEntry = {
                 heightM = hM,

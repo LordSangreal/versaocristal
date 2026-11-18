@@ -11,7 +11,7 @@
       "id": "versaocristal",
       "title": "Versao Cristal",
       "author": "LordSangreal",
-      "version": "0.62.0",
+      "version": "0.63.0",
             "categories": [
         "LANGUAGE"
       ],
@@ -33,15 +33,15 @@
       ],
       "description_url": "data/mods/LordSangreal@versaocristal/description.md",
       "latest": {
-        "version": "0.62.0",
-        "tag": "v0.62.0",
-        "name": "Versao Cristal 0.62.0 -- auditoria de traducao, metrica da Pokedex e glifos",
+        "version": "0.63.0",
+        "tag": "v0.63.0",
+        "name": "Versao Cristal 0.63.0 -- traducao completa e 6 opcoes novas",
         "prerelease": false,
-        "published_at": "2026-11-18T02:29:03Z",
+        "published_at": "2026-11-18T03:22:22Z",
         "zip": {
-          "name": "versaocristal-0.62.0.zip",
-          "url": "https://github.com/LordSangreal/versaocristal/releases/download/v0.62.0/versaocristal-0.62.0.zip",
-          "size": 555668
+          "name": "versaocristal-0.63.0.zip",
+          "url": "https://github.com/LordSangreal/versaocristal/releases/download/v0.63.0/versaocristal-0.63.0.zip",
+          "size": 561660
         }
       },
       "update_check": "ok"

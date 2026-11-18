@@ -12,9 +12,15 @@ return function(mod)
     falas = "pt",
     menus = "pt",
     golpes = "pt",
+    desc_golpes = "pt",
     itens = "pt",
+    desc_itens = "pt",
     npcs = "pt",
+    tipos = "pt",
+    status = "pt",
+    mapa = "pt",
     pokedex = "pt",
+    medidas = "METRICO",
     radios = "pt",
   }
   -- Chaves de lang/strings.lua que sao NOMES de estacao do POKeGEAR, e nao
@@ -29,12 +35,24 @@ return function(mod)
     ["Rocket Radio"] = true, ["Unown Radio"] = true,
     ["BUENA'S PASSWORD"] = true,
   }
+  -- Chaves de status em lang/strings.lua controladas pela opcao `status`.
+  local STATUS_CHAVES = {
+    SLP = true, PSN = true, BRN = true, FRZ = true, PAR = true, FNT = true,
+  }
   local temOpcoes = pcall(function()
     mod.options:define({
       {
         key = "golpes",
         type = "choice",
         label = "NOME DOS GOLPES",
+        choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
+        default = "pt",
+        requires_restart = true,
+      },
+      {
+        key = "desc_golpes",
+        type = "choice",
+        label = "DESCRIÇÕES DOS GOLPES",
         choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
         default = "pt",
         requires_restart = true,
@@ -48,9 +66,41 @@ return function(mod)
         requires_restart = true,
       },
       {
+        key = "desc_itens",
+        type = "choice",
+        label = "DESCRIÇÕES DOS ITENS",
+        choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
+        default = "pt",
+        requires_restart = true,
+      },
+      {
         key = "npcs",
         type = "choice",
         label = "NOME DOS NPCS",
+        choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
+        default = "pt",
+        requires_restart = true,
+      },
+      {
+        key = "tipos",
+        type = "choice",
+        label = "NOMES DOS TIPOS",
+        choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
+        default = "pt",
+        requires_restart = true,
+      },
+      {
+        key = "status",
+        type = "choice",
+        label = "RÓTULOS DE STATUS",
+        choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
+        default = "pt",
+        requires_restart = true,
+      },
+      {
+        key = "mapa",
+        type = "choice",
+        label = "NOMES DO MAPA",
         choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
         default = "pt",
         requires_restart = true,
@@ -61,6 +111,14 @@ return function(mod)
         label = "POKEDEX",
         choices = { { "PORTUGUES", "pt" }, { "ENGLISH", "en" } },
         default = "pt",
+        requires_restart = true,
+      },
+      {
+        key = "medidas",
+        type = "choice",
+        label = "MEDIDAS DA #DEX",
+        choices = { { "METRICO", "METRICO" }, { "IMPERIAL", "IMPERIAL" } },
+        default = "METRICO",
         requires_restart = true,
       },
       {
@@ -92,7 +150,9 @@ return function(mod)
   if temOpcoes then
     for chave in pairs(idioma) do
       local ok, valor = pcall(function() return mod.options:get(chave) end)
-      if ok and valor == "en" then idioma[chave] = "en" end
+      if ok and type(valor) == "string" and valor ~= "" then
+        idioma[chave] = valor
+      end
     end
   end
 
@@ -161,6 +221,8 @@ return function(mod)
     n = n + each("strings", function(src, value)
       -- Nome de estacao em ENGLISH: nao sobrescreve, o motor mostra o original.
       if idioma.radios == "en" and ESTACOES[src] then return end
+      -- Rotulo de status em ENGLISH: nao sobrescreve SLP/PSN/BRN/FRZ/PAR/FNT.
+      if idioma.status == "en" and STATUS_CHAVES[src] then return end
       mod.content.strings:override(src, value)
     end)
 
@@ -235,26 +297,28 @@ return function(mod)
         end
       end
 
-      local catalog_landmarks = catalog("landmarks")
-      if Pokegear.mapLandmark then
-        local orig_map = Pokegear.mapLandmark
-        Pokegear.mapLandmark = function(self)
-          local entry = orig_map(self)
-          if entry and entry.id and catalog_landmarks[entry.id] then
-            entry.name = catalog_landmarks[entry.id]
+      if idioma.mapa == "pt" then
+        local catalog_landmarks = catalog("landmarks")
+        if Pokegear.mapLandmark then
+          local orig_map = Pokegear.mapLandmark
+          Pokegear.mapLandmark = function(self)
+            local entry = orig_map(self)
+            if entry and entry.id and catalog_landmarks[entry.id] then
+              entry.name = catalog_landmarks[entry.id]
+            end
+            return entry
           end
-          return entry
         end
-      end
 
-      if Pokegear.playerLandmark then
-        local orig_player = Pokegear.playerLandmark
-        Pokegear.playerLandmark = function(self)
-          local entry = orig_player(self)
-          if entry and entry.id and catalog_landmarks[entry.id] then
-            entry.name = catalog_landmarks[entry.id]
+        if Pokegear.playerLandmark then
+          local orig_player = Pokegear.playerLandmark
+          Pokegear.playerLandmark = function(self)
+            local entry = orig_player(self)
+            if entry and entry.id and catalog_landmarks[entry.id] then
+              entry.name = catalog_landmarks[entry.id]
+            end
+            return entry
           end
-          return entry
         end
       end
     end)
@@ -370,6 +434,8 @@ return function(mod)
     n = n + each("item_names", function(id, value)
       mod.content.items:patch(id, { name = value })
     end)
+  end
+  if idioma.desc_itens == "pt" then
     each("item_descriptions", function(id, value)
       pcall(function() mod.content.items:patch(id, { description = value }) end)
     end)
@@ -379,14 +445,18 @@ return function(mod)
     each("move_names", function(id, value)
       pcall(function() mod.content.moves:patch(id, { name = value }) end)
     end)
+  end
+  if idioma.desc_golpes == "pt" then
     each("move_descriptions", function(id, value)
       pcall(function() mod.content.moves:patch(id, { description = value }) end)
     end)
   end
 
-  n = n + each("landmarks", function(id, value)
-    mod.content.landmarks:patch(id, { name = value })
-  end)
+  if idioma.mapa == "pt" then
+    n = n + each("landmarks", function(id, value)
+      mod.content.landmarks:patch(id, { name = value })
+    end)
+  end
 
   if idioma.npcs == "pt" then
     each("trainer_classes", function(id, value)
@@ -394,19 +464,22 @@ return function(mod)
     end)
   end
 
-  if idioma.menus == "pt" then
+  if idioma.status == "pt" then
     each("status_labels", function(id, value)
       pcall(function() mod.content.statuses:patch(id, { label = value, hudLabel = value }) end)
     end)
   end
 
-  each("type_names", function(id, value)
-    pcall(function() mod.content.type_chart:patch(id, { name = value }) end)
-  end)
+  if idioma.tipos == "pt" then
+    each("type_names", function(id, value)
+      pcall(function() mod.content.type_chart:patch(id, { name = value }) end)
+    end)
+  end
 
   -- POKéDEX
+  local dex
   if idioma.pokedex == "pt" then
-    local dex = catalog("pokedex")
+    dex = catalog("pokedex")
     if mod.content.pokedex then
       for id, entrada in pairs(dex) do
         if type(entrada) == "table" then
@@ -414,23 +487,24 @@ return function(mod)
         end
       end
     end
-    if mod.content.pokemon then
-      for id, entrada in pairs(dex) do
-        if type(entrada) == "table" and entrada.height and entrada.weight then
-          pcall(function()
-            local hM = (math.floor(entrada.height / 100) * 12 + (entrada.height % 100)) * 0.0254
-            local wKg = entrada.weight / 10 * 0.45359237
-            mod.content.pokemon:patch(id, {
-              dexEntry = {
-                heightM = hM,
-                weightKg = wKg,
-                heightFt = math.floor(entrada.height / 100),
-                heightIn = entrada.height % 100,
-                weight = entrada.weight,
-              },
-            })
-          end)
-        end
+  end
+  if idioma.medidas == "METRICO" and mod.content.pokemon then
+    dex = dex or catalog("pokedex")
+    for id, entrada in pairs(dex) do
+      if type(entrada) == "table" and entrada.height and entrada.weight then
+        pcall(function()
+          local hM = (math.floor(entrada.height / 100) * 12 + (entrada.height % 100)) * 0.0254
+          local wKg = entrada.weight / 10 * 0.45359237
+          mod.content.pokemon:patch(id, {
+            dexEntry = {
+              heightM = hM,
+              weightKg = wKg,
+              heightFt = math.floor(entrada.height / 100),
+              heightIn = entrada.height % 100,
+              weight = entrada.weight,
+            },
+          })
+        end)
       end
     end
   end

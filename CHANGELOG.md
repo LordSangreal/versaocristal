@@ -1,5 +1,11 @@
 # Changelog - Versão Cristal PT-BR
 
+## [0.63.0] - 2026-11-18
+### Traduzido e corrigido (auditoria completa)
+- **861 palavras adicionadas** em 189 chaves novas de tela (STATUS de OVO, insígnias, Banco da Mãe, Concurso de Insetos, Card Flip, Slot Machine, Prize Menu, Battle Tower, PC/Box, Move Tutor, avaliações do Prof. Oak, itens, batalha e Union Room).
+- **5.792 palavras corrigidas** em 591 entradas (reformatação para 18 colunas, `<NEXT>` nas descrições de golpe, tokens inválidos trocados por `{STRBUF}`, perguntas do quiz do Radio Card e fala de Clair do Crystal).
+- **6 novas opções** no menu do mod: DESCRIÇÕES DOS GOLPES, DESCRIÇÕES DOS ITENS, NOMES DOS TIPOS, RÓTULOS DE STATUS, NOMES DO MAPA e MEDIDAS DA #DEX (MÉTRICO/IMPERIAL). Todas com restart e padrão PT/MÉTRICO.
+
 ## [0.62.0] - 2026-11-17
 ### Corrigido (lote seguro da auditoria — respeita as opções PT/EN do mod)
 - **Pokédex em metros/kg**: a fórmula em `main.lua` usava a codificação métrica do Gold; agora converte corretamente pés/polegadas e libras dos dados do Crystal (`AERODACTYL` 5'11"/130 lb → 1,80 m / 58,97 kg).

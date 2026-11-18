@@ -2,14 +2,10 @@
 -- Duas linhas de ate 18 colunas.
 -- TM e HM nao entram: a bolsa mostra a descricao do GOLPE.
 return {
-  ["BLUE_CARD"] = "Mostra os pontos
-da BUENA.",
-  ["CLEAR_BELL"] = "Aumenta o volume
-do som.",
-  ["EGG_TICKET"] = "Ingresso para
-o evento de OVO.",
-  ["GS_BALL"] = "Bola especial
-de GOLD e SILVER.",
+  ["BLUE_CARD"] = "Mostra os pontos\nda BUENA.",
+  ["CLEAR_BELL"] = "Aumenta o volume\ndo som.",
+  ["EGG_TICKET"] = "Ingresso para\no evento de OVO.",
+  ["GS_BALL"] = "Bola especial\nde GOLD e SILVER.",
   ["AMULET_COIN"] = "Dobra o dinheiro\nganho. (SEGURA)",
   ["ANTIDOTE"] = "Cura POKéMON\nenvenenado.",
   ["AWAKENING"] = "Acorda POKéMON\nadormecido.",
